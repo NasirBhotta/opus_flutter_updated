@@ -1,3 +1,4 @@
+APP_PLATFORM := android-21
 LOCAL_PATH := $(call my-dir)/libopus
 include $(CLEAR_VARS)
 include $(LOCAL_PATH)/celt_sources.mk
@@ -71,5 +72,6 @@ ifeq ($(TARGET_ARCH_ABI),$(filter $(TARGET_ARCH_ABI), x86 x86_64))
 		LOCAL_CFLAGS += -DOPUS_X86_MAY_HAVE_SSE4_1 -DOPUS_X86_PRESUME_SSE4_1
 	endif
 endif
+
 
 include $(BUILD_SHARED_LIBRARY)
